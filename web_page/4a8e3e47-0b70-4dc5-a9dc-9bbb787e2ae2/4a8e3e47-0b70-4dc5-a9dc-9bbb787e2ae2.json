@@ -1,0 +1,353 @@
+{
+  "designerVersion" : "1.7.25",
+  "previousDesignerVersion" : "1.5.27",
+  "id" : "4a8e3e47-0b70-4dc5-a9dc-9bbb787e2ae2",
+  "name" : "TravelTool",
+  "lastUpdate" : 1533714672203,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 6
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "Travel tool"
+      },
+      "level" : {
+        "type" : "constant",
+        "value" : "Level 2"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      }
+    },
+    "reference" : "674d31bc-d3bf-49a9-80b1-479b7db3298f",
+    "id" : "pbTitle"
+  }, {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 6
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "{{session.user_name}}"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "right"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      }
+    },
+    "reference" : "4ddbcfb2-fa19-4949-937d-0f61bdcff99f",
+    "id" : "pbText"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "This page lists your pending and approved travel requests."
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      }
+    },
+    "reference" : "5449bf5a-5469-4d8e-99f7-5586aba19f96",
+    "id" : "pbText"
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "52c2b459-a06f-41ac-a93e-3b146ac17f2e",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "My pending requests"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 3"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "68bdbe6b-4d33-4d41-9b4b-05681a5795bf",
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "headers" : {
+          "type" : "constant",
+          "value" : [ "Departure date", "Number of nights", "Hotel needed", "Destination", "Reason" ]
+        },
+        "content" : {
+          "type" : "expression",
+          "value" : "myPendingRequests"
+        },
+        "columnsKey" : {
+          "type" : "constant",
+          "value" : [ "departureDate | date", "numberOfNights", "hotelNeeded", "destination", "reason" ]
+        },
+        "selectedRow" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "77d47f02-28cf-4d15-b04a-38a2cda78ad0",
+      "id" : "pbTable"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "Create new travel request"
+        },
+        "type" : {
+          "type" : "constant",
+          "value" : "URL"
+        },
+        "targetUrl" : {
+          "type" : "expression",
+          "value" : "\"/bonita/portal/resource/process/Travel%20Request/1.0/content/?id=\"+processDef[0].id"
+        },
+        "pageToken" : {
+          "type" : "constant"
+        },
+        "processName" : {
+          "type" : "constant"
+        },
+        "processVersion" : {
+          "type" : "constant"
+        },
+        "taskId" : {
+          "type" : "constant"
+        },
+        "caseId" : {
+          "type" : "constant"
+        },
+        "target" : {
+          "type" : "constant",
+          "value" : "_self"
+        },
+        "appToken" : {
+          "type" : "constant"
+        },
+        "urlParams" : {
+          "type" : "constant"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "center"
+        },
+        "buttonStyle" : {
+          "type" : "constant",
+          "value" : "primary"
+        }
+      },
+      "reference" : "3f8a3073-ee38-4800-a29e-c88b4a042a3f",
+      "id" : "pbLink"
+    } ] ]
+  } ], [ {
+    "type" : "container",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "repeatedCollection" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "4a0f761a-79c2-4f67-bdcd-2589113b880b",
+    "id" : "pbContainer",
+    "rows" : [ [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "text" : {
+          "type" : "interpolation",
+          "value" : "My approved requests"
+        },
+        "level" : {
+          "type" : "constant",
+          "value" : "Level 3"
+        },
+        "alignment" : {
+          "type" : "constant",
+          "value" : "left"
+        }
+      },
+      "reference" : "6b144629-6219-4a30-afad-bc00be590269",
+      "id" : "pbTitle"
+    } ], [ {
+      "type" : "component",
+      "dimension" : {
+        "xs" : 12
+      },
+      "propertyValues" : {
+        "cssClasses" : {
+          "type" : "constant",
+          "value" : ""
+        },
+        "hidden" : {
+          "type" : "constant",
+          "value" : false
+        },
+        "headers" : {
+          "type" : "constant",
+          "value" : [ "Departure date", "Number of nights", "Hotel needed", "Destination", "Reason" ]
+        },
+        "content" : {
+          "type" : "expression",
+          "value" : "myApprovedRequests"
+        },
+        "columnsKey" : {
+          "type" : "constant",
+          "value" : [ "departureDate | date", "numberOfNights", "hotelNeeded", "destination", "reason" ]
+        },
+        "selectedRow" : {
+          "type" : "variable"
+        }
+      },
+      "reference" : "9a29ec3d-78e2-4d7f-b862-fcd75a8aab52",
+      "id" : "pbTable"
+    } ] ]
+  } ] ],
+  "assets" : [ {
+    "id" : "0e12c253-c0d1-4fe8-bc83-14ab0d88111d",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 0,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "myPendingRequests" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.TravelRequest?q=findByUserIdAndStatus&p=0&c=10&f=userId={{session.user_id}}&f=status=pending",
+      "exposed" : false
+    },
+    "myApprovedRequests" : {
+      "type" : "url",
+      "value" : "../API/bdm/businessData/com.company.model.TravelRequest?q=findByUserIdAndStatus&p=0&c=10&f=userId={{session.user_id}}&f=status=approved",
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : "../API/system/session/unusedId",
+      "exposed" : false
+    },
+    "processDef" : {
+      "type" : "url",
+      "value" : "../API/bpm/process?p=0&c=1&f=name=Travel%20Request",
+      "exposed" : false
+    }
+  },
+  "uuid" : "4a8e3e47-0b70-4dc5-a9dc-9bbb787e2ae2",
+  "type" : "page"
+}
